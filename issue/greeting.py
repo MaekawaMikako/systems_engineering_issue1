@@ -2,6 +2,7 @@ from tkinter import *
 import tkinter
 import tkinter as t
 import tkinter as tk
+from PIL import ImageTk, Image
 
 text  = ""
 def func(event):
@@ -37,7 +38,8 @@ for i in range(len(radio_text)):
     radio = tkinter.Radiobutton(window, value=i, variable=radio_var, text=radio_text[i])
     radio.grid(row=1,column=i)
 
-but = t.Button(text = '実行')
+img = PhotoImage(file='submit.png')
+but = Button(image=img)
 but.bind('<Button-1>', func)
 but.grid(row=0,column=1)
 
